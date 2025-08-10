@@ -1,0 +1,90 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #e1e1e1;
+  color: black;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+.positionRelative {
+  position: relative;
+}
+.positionAbsolute {
+  position: absolute;
+}
+.accordianContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .accordian {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+
+    .accordianHeader {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid black;
+    }
+
+    .accordianContent {
+      padding: 8px;
+    }
+  }
+}
+
+.carouselContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .carouselContent {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+
+    .sidePanel {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      span {
+        padding: 16px;
+        cursor: pointer;
+        &:hover {
+          background-color: #d1d1d1;
+        }
+      }
+    }
+
+    .mainViewer {
+      padding: 8px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
