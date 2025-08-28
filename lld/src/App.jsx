@@ -3,6 +3,15 @@ import './App.css'
 import StarRating from './components/StarRating';
 import Carousel from './components/Carousel';
 import Accordian from './components/Accordian';
+import AutoComplete from './components/AutoComplete';
+import TicTacToe from './components/ticTacToe';
+import PollWidget from './components/PollWidget';
+import SelectableGrid from './components/SelectableGrid';
+import DragAndDrop from './components/DragAndDrop';
+import NestedCheckbox from './components/NestedCheckbox';
+import InfiniteScroll from './components/InfiniteScroll';
+import VirtualScroll from './components/VirtualScroll';
+import FileExplorer from './components/FileExplorer';
 
 function App() {
 
@@ -12,6 +21,15 @@ function App() {
         <Route exact path="/star" Component={StarRating}/>
         <Route exact path='/carousel' Component={Carousel}/>
         <Route exact path='/accordian' Component={Accordian}/>
+        <Route exact path='/autocomplete' Component={AutoComplete}/>
+        <Route exact path='/tictactoe' Component={TicTacToe}/>
+        <Route exact path='/pollwidget' Component={PollWidget}/>
+        <Route exact path='/selectablegrid' Component={SelectableGrid}/>
+        <Route exact path='/draganddrop' Component={DragAndDrop}/>
+        <Route exact path='/nestedcheckbox' Component={NestedCheckbox}/>
+        <Route exact path='/infinitescroll' Component={InfiniteScroll}/>
+        <Route exact path='/virtualscroll' Component={VirtualScroll}/>
+        <Route exact path='/fileExplorer' Component={FileExplorer}/>
       </Routes>
     </Router>
   )
@@ -23,19 +41,15 @@ export default App;
 // Star Rating - DONE
 // Carousel - DONE
 // Accordian - DONE
-// File-folder
-// Modal
-// Dropdown
-// Pagination
-// Tooltip
-// Alert
-// Breadcrumbs
-// Infinite scroll with virtulization
+// AutoComplete - DONE
+// Tic Tac Toe - DONE
+// File-folder - 
 // NestedCheckbox
+// Pagination
+// Infinite scroll with virtulization
+// Breadcrumbs
 // Tabs
-// Todo-list
 // TypeAhead
-// WhatsappChat
 // Google-calendar
 // tic tac toe
 // Form Validation

@@ -79,12 +79,175 @@ body {
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      
-      img{
+
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
   }
+}
+
+.autoCompleteContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .autoComplete {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+
+    input {
+      padding: 8px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      background-color: white;
+      color: black;
+    }
+
+    .suggestions {
+      border-top: 1px solid black;
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          padding: 8px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #d1d1d1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ticTacToeContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .ticTacToeBoard {
+    display: grid;
+  }
+
+  .box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+  }
+}
+
+.pollWidgetContainer {
+  .pollWidget {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pollWidgetContent {
+    width: 100%;
+  }
+
+  .pollWidgetItem {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    margin-block: 4px;
+
+    button {
+      margin: 4px;
+    }
+    span {
+      margin: 4px;
+    }
+  }
+  .centerLine {
+    outline: 1px dotted black;
+  }
+}
+
+.selectableGridContainer {
+  .selectableGrid {
+    display: grid;
+    grid-template-columns: repeat(var(--col), 1fr);
+    grid-template-rows: repeat(var(--row), 1fr);
+    gap: 4px;
+  }
+
+  .gridItem {
+    border: 1px solid black;
+    user-select: none;
+  }
+
+  .selected {
+    background-color: lightblue;
+  }
+}
+
+.dragDropContainer {
+  .dragDropContent {
+    width: 80% !important;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dragDropColumn{
+    background-color: #d1d1d1;
+    padding: 16px;
+  }
+
+  .task{
+    margin: 8px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+  }
+}
+
+.infiniteScrollContainer{
+  .infiniteScrollContent{
+    border : 1px solid black;
+    padding: 16px;
+    height: 400px;
+    overflow-y: auto;
+  }
+}
+
+.virtualScrollContainer{
+  .virtualScrollContent{
+    border : 1px solid black;
+    padding: 16px;
+    height: 400px;
+    overflow-y: auto;
+  }
+}
+
+.nestedCheckboxContainer{
+  .parent{
+    padding-left : 20px;
+  }
+}
+
+.parentContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

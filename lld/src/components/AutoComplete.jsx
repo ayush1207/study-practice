@@ -1,20 +1,53 @@
-import React from 'react'
+import { useEffect, useState } from "react";
 
+const suggestionData = [
+  "Apple",
+  "Banana",
+  "Cherry",
+  "Date",
+  "Elderberry",
+  "Fig",
+  "Grape",
+  "Honeydew",
+];
 const AutoComplete = () => {
-  return (
-    <div>
-        <div>
-            <input type="text" placeholder="Search..." />
-            <div className="suggestions">
-                <ul>
-                    <li>Suggestion 1</li>
-                    <li>Suggestion 2</li>
-                    <li>Suggestion 3</li>
-                </ul>
-            </div>       
-        </div>
-    </div>
-  )
-}
+  const [data, setData] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
 
-export default AutoComplete
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setSuggestions(() => {
+        return suggestionData.filter((item) => {
+          return data && item.toLowerCase().includes(data.toLowerCase());
+        });
+      });
+    }, 500);
+    return () => clearTimeout(delay);
+  }, [data]);
+
+  return (
+    <div className="autoCompleteContainer">
+      <div className="autoComplete">
+        <input
+          type="text"
+          placeholder="Search..."
+          value={data}
+          onChange={(e) => setData(e.target.value)}
+        />
+        {data && suggestions && (
+          <div className="suggestions">
+            <ul>
+              {suggestions.map((item, index) => (
+                <li key={index}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default AutoComplete;
